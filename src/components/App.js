@@ -5,9 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import EventForm from './EventForm';
 import Events from './Events';
 import AppContext from '../contexts/AppContext';
-import reducer from '../reducers/index';
+import reducer from '../reducers/events';
 
 const App = () => {
+  const initialState = {
+    events: []
+  };
+
   const [state, dispatch] = useReducer(reducer, []);
   console.log(state, 'in App.js');
 
